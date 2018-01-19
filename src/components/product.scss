@@ -1,0 +1,79 @@
+
+@mixin rounded($amount) {
+  -moz-border-radius: $amount;
+  -webkit-border-radius: $amount;
+  border-radius: $amount;
+}
+.Product{
+  flex: 0 0 20%;
+  max-width: 20%;
+  margin: 10px auto;
+  padding: 10px 5px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  background-color: #fff;
+  position: relative;
+  padding-bottom: 45px;
+}
+.Product > div{
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100%;
+  word-wrap: break-word;
+}
+.img {
+  margin-top: 30px;
+  width: 100%;
+  height: 100px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.price{
+  position: absolute;
+  right: 0;
+  background-color: #2FDAB8;
+  color: #fff;
+  padding: 5px;
+  margin: 0;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+}
+.buy-btn{
+  background-color: #25B094;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px 0;
+  border: 0;
+  @include rounded(2px);
+  width: 80%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 10%;
+  transition: background-color 300ms;
+}
+.buy-btn:hover{
+  background-color: #50BFA9;
+}
+@media (max-width: 991.99px) {
+  .Product{
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+@media (max-width: 767.99px) {
+  .Product{
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+}
+@media (max-width: 475.99px) {
+  .Product{
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}

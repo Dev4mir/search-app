@@ -1,0 +1,9 @@
+$darkGray: #737373;
+
+@import "./components/ProductsList.scss";
+@import "./components/product.scss";
+
+
+.App{
+  color: $darkGray;
+}
